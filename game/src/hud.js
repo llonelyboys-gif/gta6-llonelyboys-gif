@@ -189,6 +189,8 @@ export function createHud() {
     ctx.fillText(hint, VIEW.width / 2, VIEW.height - 86);
   }
 
+  // The arrow points at the off-screen goal from the nearest screen edge, with the
+  // distance in metres — so the player always knows which way the job is.
   function drawArrow(ctx, s, camera) {
     if (!s.marker) return;
     const m = s.marker;

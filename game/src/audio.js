@@ -13,6 +13,9 @@ export function createAudio() {
   let sirenGain = null;
   let sirenTimer = 0;
   let sirenHigh = false;
+  // The two-tone siren: the high and low notes it alternates between.
+  const SIREN_HIGH = 880;
+  const SIREN_LOW = 660;
   let musicTimer = null;
   let musicStep = 0;
   let muted = false;
@@ -132,7 +135,7 @@ export function createAudio() {
       if (sirenTimer <= 0) {
         sirenTimer = 0.42;
         sirenHigh = !sirenHigh;
-        sirenOsc.frequency.setTargetAtTime(sirenHigh ? 880 : 660, ctx.currentTime, 0.05);
+        sirenOsc.frequency.setTargetAtTime(sirenHigh ? SIREN_HIGH : SIREN_LOW, ctx.currentTime, 0.05);
       }
       sirenGain.gain.setTargetAtTime(muted ? 0 : sirenNear ? 0.035 : 0, ctx.currentTime, 0.2);
     },

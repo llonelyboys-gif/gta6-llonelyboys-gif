@@ -6,6 +6,9 @@
 import { pointInBuilding } from './city.js';
 import { PLAYER, RIVAL } from './config.js';
 
+/** Damage one bullet does to a car (people take PLAYER.damage instead). */
+const CAR_SHOT_DAMAGE = 20;
+
 export function createParticles() {
   return [];
 }
@@ -147,7 +150,7 @@ export function shoot(s, x0, y0, angle) {
   if (!hit && wall) hit = 'wall';
   if (hitTarget) {
     if (hit === 'car') {
-      hitTarget.health -= 20;
+      hitTarget.health -= CAR_SHOT_DAMAGE;
       addSparks(s.parts, hx, hy, '#ffb703');
     } else {
       hitTarget.health = (hitTarget.health ?? 50) - PLAYER.damage;

@@ -80,6 +80,7 @@ function nearestLine(value, lines) {
 
 /** The right-hand lane centre for a car heading `dir` on its current road. */
 function laneTarget(car) {
+  // 28 units off the centre line puts the car in the right-hand lane.
   const off = 28;
   if (car.dir === 0) return { x: car.x, y: nearestLine(car.y, STREETS) + off };
   if (car.dir === 2) return { x: car.x, y: nearestLine(car.y, STREETS) - off };

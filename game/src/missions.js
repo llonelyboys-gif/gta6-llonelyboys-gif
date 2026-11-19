@@ -38,6 +38,7 @@ export function startMission(m, index, s, random) {
   m.index = index;
   m.stage = 0;
   m.active = true;
+  // The Docks run is timed: 100 seconds from the moment the job starts.
   if (index === 1) m.timer = 100;
   if (index === 2) { gainWanted(s.wanted, 2); m.timer = 0; }
   if (index === 3) m.timer = 0;

@@ -43,6 +43,7 @@ export function updateWanted(wanted, dt, s, random) {
   let event = null;
   const player = s.player;
   const policeCars = s.cars.filter((c) => c.driver === 'police' && !c.wreck);
+  // The heat only cools when no police car (650 units) or foot cop (500) can see the player.
   const near = policeCars.some((c) => Math.hypot(c.x - player.x, c.y - player.y) < 650)
     || s.cops.some((c) => Math.hypot(c.x - player.x, c.y - player.y) < 500);
   if (wanted.stars > 0 && !near) {

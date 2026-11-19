@@ -42,6 +42,8 @@ Open the served page in a desktop browser. No build step, no network requests, n
 
 For a repeatable frame, add `?seed=N` to fix the city and traffic, or `?shot=start|drive|chase|mission&seed=1` to stage one of the four screenshot scenes.
 
+From the pause menu (P) you can replay any of the five jobs (keys 1–5) or restart the current one (R) — cash and progress carry over.
+
 ## Build the entry
 
 ```sh

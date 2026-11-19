@@ -56,6 +56,9 @@ export function randomRoadPoint(random) {
   return { x: range(random, 60, WORLD.width - 60), y: pick(random, STREETS) };
 }
 
+/** Gap kept between buildings so every block stays walkable. */
+const BUILDING_GAP = 24;
+
 /** Build the city from the seeded random: buildings, parks and parking lots. */
 export function createCity(random) {
   const buildings = [];
@@ -88,10 +91,9 @@ export function createCity(random) {
         const h = range(random, 90, 160);
         const x = range(random, x0, x1 - w);
         const y = range(random, y0, y1 - h);
-        // Keep a 24-unit gap between buildings so every block stays walkable.
         let clear = true;
         for (const b of buildings) {
-          if (x < b.x + b.w + 24 && x + w + 24 > b.x && y < b.y + b.h + 24 && y + h + 24 > b.y) { clear = false; break; }
+          if (x < b.x + b.w + BUILDING_GAP && x + w + BUILDING_GAP > b.x && y < b.y + b.h + BUILDING_GAP && y + h + BUILDING_GAP > b.y) { clear = false; break; }
         }
         if (!clear) continue;
         buildings.push({ x, y, w, h, color: pick(random, PALETTE.buildingRoof), tall: random() < 0.3 });

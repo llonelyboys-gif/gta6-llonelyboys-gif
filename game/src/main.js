@@ -15,6 +15,7 @@ import { missionMarker, startMission } from './missions.js';
 import { createAudio } from './audio.js';
 import { stageShot } from './shots.js';
 
+// Cap one frame's catch-up at 0.25 s so a tab that was hidden doesn't fast-forward the world.
 const MAX_FRAME = 0.25;
 const SAVE_EVERY = 15;
 

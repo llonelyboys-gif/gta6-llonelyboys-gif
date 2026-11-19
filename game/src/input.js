@@ -64,19 +64,19 @@ export function createInput(canvas) {
   window.addEventListener('blur', () => {
     up = down = left = right = sprint = fire = false;
   });
-  canvas.addEventListener('pointerdown', (event) => {
+  // Keep the mouse in canvas pixels; pointerdown and pointermove share it.
+  function trackMouse(event) {
     const rect = canvas.getBoundingClientRect();
     mouseX = event.clientX - rect.left;
     mouseY = event.clientY - rect.top;
+  }
+  canvas.addEventListener('pointerdown', (event) => {
+    trackMouse(event);
     if (event.button === 0) fire = true;
     actions |= ACTION_CONFIRM;
   });
   window.addEventListener('pointerup', () => { fire = false; });
-  canvas.addEventListener('pointermove', (event) => {
-    const rect = canvas.getBoundingClientRect();
-    mouseX = event.clientX - rect.left;
-    mouseY = event.clientY - rect.top;
-  });
+  canvas.addEventListener('pointermove', trackMouse);
 
   return {
     /** Movement vector from held keys, -1..1 on each axis. */

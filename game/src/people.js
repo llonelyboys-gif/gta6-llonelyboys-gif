@@ -53,6 +53,7 @@ export function updatePed(ped, dt, city, danger) {
   const dy = ty - ped.y;
   const d = Math.hypot(dx, dy);
   if (d < 12) {
+    // Reached the target: idle a moment (0–2 s) before picking a new stroll.
     if (ped.wait > 0) { ped.wait -= dt; return; }
     ped.target = sidewalkPoint(Math.random);
     ped.wait = range(Math.random, 0, 2);

@@ -9,6 +9,7 @@ import { spawnPeds, spawnRivals } from './people.js';
 import { SCREEN_PLAY, SCREEN_TITLE } from './hud.js';
 import { missionMarker } from './missions.js';
 
+// How long each scene's autopilot runs before the frame is taken.
 const START_SECONDS = 6;
 const DRIVE_SECONDS = 9;
 const CHASE_SECONDS = 7;

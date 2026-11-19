@@ -63,6 +63,7 @@ export const WANTED_DECAY_STEP = 8;
 export const COP = { radius: 13, speed: 235, bustRange: 26 };
 export const RIVAL = { radius: 13, health: 70, damage: 9, range: 380, fireDelay: 0.9 };
 
+// Mission payouts rise with the job — the last getaway pays the most.
 export const MISSION_REWARDS = [150, 300, 250, 500, 1000];
 export const REPAIR_COST = 50;
 export const AMMO_COST = 30;

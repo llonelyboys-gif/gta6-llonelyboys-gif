@@ -122,6 +122,7 @@ export function createRenderer(canvas) {
 
   function drawBuildings(s, camX, camY) {
     for (const b of s.city.buildings) {
+      // Skip buildings outside the camera window — the city is far bigger than the screen.
       if (b.x > camX + VIEW.width + 40 || b.x + b.w < camX - 40 || b.y > camY + VIEW.height + 40 || b.y + b.h < camY - 40) continue;
       const lift = b.tall ? 12 : 6;
       ctx.fillStyle = 'rgba(0,0,0,0.18)';

@@ -66,7 +66,8 @@ function resetWorld(s, keepCash) {
   s.player = createPlayer(CITY.garage.x + 40, CITY.garage.y + 120);
 }
 
-/** Respawn the player at the garage after an arrest or a hospital visit. */
+/** Respawn the player at the garage after an arrest or a hospital visit. Busted keeps
+ * 80% of the cash (the police take a cut); wasted keeps 90% (the hospital bill is smaller). */
 function respawn(s, keepFraction) {
   const p = s.player;
   s.cash = Math.floor(s.cash * keepFraction);

@@ -11,7 +11,7 @@ export function createRandom(seed) {
   };
 }
 
-/** Pick one element of an array with the seeded random. */
+/** Pick one element of an array with the seeded random, so the pick repeats for a given seed. */
 export function pick(random, list) {
   return list[Math.floor(random() * list.length)];
 }

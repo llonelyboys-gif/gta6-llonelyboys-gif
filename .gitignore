@@ -162,3 +162,7 @@ vite.config.ts.timestamp-*
 .nx/migrate-runs
 
 # Solmar City: the Playwright screenshot script lives outside the repo (../shot-tools).
+
+# OS files — never commit Finder or Explorer metadata.
+.DS_Store
+Thumbs.db
