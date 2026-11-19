@@ -8,6 +8,7 @@
 // level with police, five story missions, combat, a HUD with a minimap, and a save.
 //
 // Play it locally with `node serve.ts`, then open http://localhost:8080.
+// The program never touches the network: it only copies files and writes dossier.json.
 // Outside the grader's container, MAKEFUN_OUTPUT_DIR stands in for /output:
 //   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 

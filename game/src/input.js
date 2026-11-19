@@ -16,6 +16,7 @@ const DOWN = new Set(['ArrowDown', 'KeyS']);
 const LEFT = new Set(['ArrowLeft', 'KeyA']);
 const RIGHT = new Set(['ArrowRight', 'KeyD']);
 const SPRINT = new Set(['ShiftLeft', 'ShiftRight']);
+// Space counts as confirm too, so the title screen starts with either key.
 const CONFIRM = new Set(['Enter', 'Space']);
 const PAUSE = new Set(['KeyP', 'Escape']);
 const ENTER = new Set(['KeyE']);

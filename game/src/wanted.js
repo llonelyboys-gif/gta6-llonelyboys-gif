@@ -19,6 +19,7 @@ export function gainWanted(wanted, n) {
 
 /** Spawn a police car on a road some distance from the player. */
 function spawnPoliceCar(random, player) {
+  // Try 12 spots for one far enough from the player, then settle for any road point.
   for (let tries = 0; tries < 12; tries += 1) {
     const p = randomRoadPoint(random);
     if (Math.hypot(p.x - player.x, p.y - player.y) > 700) {

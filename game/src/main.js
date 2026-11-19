@@ -234,8 +234,10 @@ function runGame() {
     if (screen === SCREEN_TITLE) {
       // The title plays over a live city, slowly panning across a busy intersection.
       const focus = { x: 1680 + Math.sin(s.time * 0.05) * 260, y: 1200 };
+      // No input on the title screen: the city idles while the camera pans.
+      const titleIdle = { mx: 0, my: 0, up: false, down: false, steer: 0, sprint: false, enter: false, fire: false, aimX: 0, aimY: 0, reload: false, start: false };
       while (accumulator >= STEP) {
-        world.step(STEP, { mx: 0, my: 0, up: false, down: false, steer: 0, sprint: false, enter: false, fire: false, aimX: 0, aimY: 0, reload: false, start: false });
+        world.step(STEP, titleIdle);
         accumulator -= STEP;
       }
       lastCamera = renderer.drawWorld(s, s.time, focus);

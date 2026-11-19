@@ -41,6 +41,8 @@ function wrapText(ctx, text, maxWidth) {
 
 export function createHud() {
   function drawStars(ctx, stars) {
+    // Two passes: a dim shadow of all five stars, then the filled ones on top,
+    // right-aligned so the row never shifts as stars are gained or lost.
     ctx.font = '26px system-ui, sans-serif';
     ctx.textAlign = 'right';
     let text = '';

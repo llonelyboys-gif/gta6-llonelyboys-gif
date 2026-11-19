@@ -101,5 +101,6 @@ export const PALETTE = {
 
 export const FONT = 'system-ui, -apple-system, "Segoe UI", sans-serif';
 
-/** Where the save lives between visits (this browser only). */
+/** Where the save lives between visits (this browser only). The v1 suffix lets a
+ * future save format bump without reading an old one. */
 export const SAVE_KEY = 'solmar-city.save.v1';

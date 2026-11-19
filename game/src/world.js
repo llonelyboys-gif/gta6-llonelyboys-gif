@@ -233,6 +233,7 @@ function step(s, dt, input) {
         x2: car.x + Math.cos(back) * 26 + Math.cos(car.angle) * car.speed * dt,
         y2: car.y + Math.sin(back) * 26 + Math.sin(car.angle) * car.speed * dt, life: 2.5,
       });
+      // Cap the skid marks at 220 so a long chase never grows the list without bound.
       if (s.skids.length > 220) s.skids.splice(0, s.skids.length - 220);
     }
     // Running over pedestrians is a crime the whole street sees.

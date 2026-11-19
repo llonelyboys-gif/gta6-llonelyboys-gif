@@ -75,6 +75,7 @@ export function updateMissions(m, dt, s, random) {
   if (!m.active || m.storyDone) return null;
   const p = s.player;
   if (m.index === 0) {
+    // Arriving within 130 units of the goal counts — no need to park on the dot.
     if (p.inCar && near(p.x, p.y, CITY.garage.x, CITY.garage.y, 130)) return completeMission(m, s);
   } else if (m.index === 1) {
     m.timer -= dt;

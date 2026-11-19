@@ -160,3 +160,5 @@ vite.config.ts.timestamp-*
 .nx/cache
 .nx/workspace-data
 .nx/migrate-runs
+
+# Solmar City: the Playwright screenshot script lives outside the repo (../shot-tools).

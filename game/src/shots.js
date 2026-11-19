@@ -41,8 +41,8 @@ function makeLoopDriver(waypoints) {
       if (along > 0 && along < 130 && side > 0 && side < 64) blockedRight = true;
       if (along > 0 && along < 130 && side < 0 && side > -64) blockedLeft = true;
     }
-    // Slower traffic ahead: swing into the left lane and pass it; brake only when
-    // the left lane is blocked too.
+    // Look 130 units ahead for a slower car, one lane (64 units) to the side: swing
+    // into the left lane and pass it; brake only when the left lane is blocked too.
     let aimX = target.x;
     let aimY = target.y;
     if (blockedRight && !blockedLeft) {

@@ -16,7 +16,7 @@ export function pick(random, list) {
   return list[Math.floor(random() * list.length)];
 }
 
-/** A value in [min, max). */
+/** A value in [min, max) — min inclusive, max exclusive, like the seed's own ranges. */
 export function range(random, min, max) {
   return min + random() * (max - min);
 }

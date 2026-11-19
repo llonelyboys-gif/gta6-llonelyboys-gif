@@ -35,6 +35,7 @@ export function createRenderer(canvas) {
     ctx.fillRect(-camX, WATER_Y - camY, WORLD.width, WORLD.height - WATER_Y);
     ctx.strokeStyle = PALETTE.waterDeep;
     ctx.lineWidth = 3;
+    // A wave line every 40 units, rolling with the game clock.
     ctx.beginPath();
     for (let x = 0; x <= WORLD.width; x += 40) {
       const y = WATER_Y + Math.sin((x + s.time * 60) / 90) * 4 - camY;

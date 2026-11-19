@@ -23,6 +23,7 @@ export function createAudio() {
     try {
       ctx = new (window.AudioContext || window.webkitAudioContext)();
       master = ctx.createGain();
+      // Half volume at the master so effects and music never clip together.
       master.gain.value = 0.5;
       master.connect(ctx.destination);
       engineOsc = ctx.createOscillator();

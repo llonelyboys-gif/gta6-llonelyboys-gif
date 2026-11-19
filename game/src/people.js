@@ -37,6 +37,7 @@ export function updatePed(ped, dt, city, danger) {
   if (danger) {
     const d = Math.hypot(ped.x - danger.x, ped.y - danger.y);
     if (d < danger.r) {
+      // Sprint 200 units straight away from the danger, then stroll again.
       const away = Math.atan2(ped.y - danger.y, ped.x - danger.x);
       tx = ped.x + Math.cos(away) * 200;
       ty = ped.y + Math.sin(away) * 200;

@@ -167,6 +167,7 @@ export function explodeCar(s, car) {
     for (const t of list) {
       if (t.dead) continue;
       const d = Math.hypot(t.x - car.x, t.y - car.y);
+      // Anyone within 130 units of the blast takes 80 damage.
       if (d < 130) {
         t.health = (t.health ?? 50) - 80;
         if (t.health <= 0) t.dead = true;

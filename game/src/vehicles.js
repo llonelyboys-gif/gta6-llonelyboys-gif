@@ -204,6 +204,7 @@ export function collideCars(cars) {
       const dx = b.x - a.x;
       const dy = b.y - a.y;
       const d = Math.hypot(dx, dy);
+      // Cars touch when their centres are closer than 46 units (two half-lengths).
       const min = 46;
       if (d >= min || d < 0.01) continue;
       const push = (min - d) / 2;

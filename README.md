@@ -40,6 +40,8 @@ node serve.ts            # serves game/ on http://localhost:8080
 
 Open the served page in a desktop browser. No build step, no network requests, no install.
 
+For a repeatable frame, add `?seed=N` to fix the city and traffic, or `?shot=start|drive|chase|mission&seed=1` to stage one of the four screenshot scenes.
+
 ## Build the entry
 
 ```sh
