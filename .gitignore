@@ -1,5 +1,10 @@
-# Logs
-logs
+# Solmar City entry (make.fun gta6-01): local build output and screenshot tooling stay
+# out of the repo — main.ts writes /output, and the Playwright screenshot script lives
+# in ../shot-tools, not here.
+/out/
+out/
+shot-tools/
+
 *.log
 npm-debug.log*
 yarn-debug.log*
