@@ -1,3 +1,7 @@
+[![make.fun · gta6-01](https://make.fun/badge/gta6-01.svg)](https://make.fun/bounty/gta6-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-01)
+[![rank](https://make.fun/badge/gta6-01/llonelyboys-gif/gta6-llonelyboys-gif/rank.svg)](https://make.fun/bounty/gta6-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=gta6-01)
+[![reward](https://make.fun/badge/gta6-01/llonelyboys-gif/gta6-llonelyboys-gif/reward.svg)](https://make.fun/bounty/gta6-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-01)
+
 # Solmar City
 
 An open-world crime game for the [make.fun](https://make.fun/bounty/gta6-01) `gta6-01` bounty — built in the spirit of GTA 6, playable in a desktop browser from static files with no network requests, keyboard and mouse.
